@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "財務目標追蹤器",
+    "version": "1.0",
+    "description": "管理和追蹤你的個人財務目標。",
+    "permissions": ["storage"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  

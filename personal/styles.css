@@ -1,0 +1,197 @@
+/* 全局樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* 容器樣式 */
+.container {
+    width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 標題樣式 */
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 2em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* 表單樣式 */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 575px; /* 自適應寬度 */
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #00b7ff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 183, 255, 0.3);
+}
+
+/* 按鈕樣式 */
+button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00b7ff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 183, 255, 0.2);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Modal 样式 */
+.modal {
+    display: none; /* 默认为隐藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 保證視窗位於最前層 */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 500px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 編輯表單欄位樣式 */
+#edit-goal-name, #edit-goal-amount {
+    width: 100%; /* 自適應寬度 */
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px; /* 增加間距 */
+    transition: border-color 0.3s ease;
+}
+
+#edit-goal-name:focus, #edit-goal-amount:focus {
+    border-color: #00b7ff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 183, 255, 0.3);
+}
+
+/* 按鈕樣式 (彈出視窗) */
+.modal-content button {
+    width: 48%;
+    margin: 0 1%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content button[type="submit"] {
+    background-color: #00b7ff;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #007bff;
+}
+
+.modal-content button[type="button"] {
+    background-color: #ddd;
+    color: #444;
+    transition: all 0.3s ease;
+}
+
+.modal-content button[type="button"]:hover {
+    background-color: #bbb;
+    color: white;
+}
+
+/* 目標列表樣式 */
+#goals-container {
+    margin-top: 20px;
+}
+
+.goal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.goal p {
+    font-size: 16px;
+    color: #444;
+    margin: 0;
+}
+
+.goal-actions {
+    display: flex;
+    gap: 10px;
+}
+
+button.edit-btn, button.delete-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.edit-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+button.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.edit-btn:hover {
+    background-color: #218838;
+}
+
+button.delete-btn:hover {
+    background-color: #c82333;
+}

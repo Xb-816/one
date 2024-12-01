@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人財務目標追蹤器</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>個人財務目標追蹤器</h1>
+    
+    <!-- 新增目標表單 -->
+    <form id="goal-form">
+      <input type="text" id="goal-name" placeholder="目標名稱" required />
+      <input type="number" id="goal-amount" placeholder="金額" required />
+      <button type="submit">新增目標</button>
+    </form>
+    
+    <!-- 目標列表 -->
+    <div id="goals-container"></div>
+
+    <!-- 下載/上傳按鈕 -->
+    <button id="download-btn">下載資料</button>
+    <input type="file" id="upload-input" style="display:none;" />
+    <button id="upload-btn">上傳資料</button>
+  </div>
+
+  <!-- 編輯彈出視窗 (Modal) -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-content">
+      <h2>編輯目標</h2>
+      <form id="edit-goal-form">
+        <input type="text" id="edit-goal-name" placeholder="目標名稱" required />
+        <input type="number" id="edit-goal-amount" placeholder="金額" required />
+        <button type="submit">儲存變更</button>
+        <button type="button" id="close-modal">關閉</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
